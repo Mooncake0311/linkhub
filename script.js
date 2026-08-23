@@ -12,14 +12,19 @@
    ========================================================================== */
 const CATEGORIES = [
   {
-    name: "Video",
-    subtitle: "WATCH, STREAM, SUBSCRIBE",
+    name: "Anime",
+    subtitle: "For WEEBS",
     icon: "🎥",
     links: [
-      { name: "YouTube", domain: "youtube.com" },
-      { name: "Vimeo", domain: "vimeo.com" },
-      { name: "Twitch", domain: "twitch.tv" },
-      { name: "TikTok", domain: "tiktok.com" },
+      { name: "Anitaku", domain: "anitaku.io/browse"},
+      { name: "AnimeSuge", domain: "anisuge.tv/home" },
+      { name: "Anime Nexus", domain: "anime.nexus" },
+      { name: "AnimePahe", domain: "animepahe.pw"},
+      { name: "JustAnime", domain: "justanime.to" },
+      { name: "Animex", domain: "animex.one/home" },
+      { name: "Yenime", domain: "yenime.net"},
+      { name: "Anify", domain: "anify.to"},
+      { name: "MiruroTV", domain: "miruro.to"},
     ],
   },
   {
@@ -28,11 +33,16 @@ const CATEGORIES = [
     icon: "🎬",
     links: [
       { name: "RamoFlix", domain: "ramoflix.net"},
-      { name: "WMovies", domain: "wmovies.org/home/" },
+      { name: "WMovies", domain: "wmovies.org/home" },
       { name: "Cineby", domain: "cineby.at" },
       { name: "Aether", domain: "aether.bar" },
       { name: "Flixer", domain: "flixer.su" },
-    ],
+      { name: "P-Stream", domain: "pstream.cfd"},
+      { name: "FlyStream", domain: "flystream.net"},
+      { name: "Flaxfer", domain: "flaxfer.lol"},
+      { name: "MovieKid", domain: "moviekids.bz"},
+      { name: "fboxtv", domain: "boxtv.bz"},
+    ],  
   },
   {
     name: "Games",
@@ -41,8 +51,10 @@ const CATEGORIES = [
     links: [
       { name: "SteamRIP", domain: "steamrip.com" },
       { name: "fitgirl repacks", domain: "fitgirl-repacks.site" },
+      { name: "DODI Repacks", domain: "dodi-repacks.site" },
       { name: "ankergames", domain: "ankergames.net" },
       { name: "Gload", domain: "gload.to" },
+      { name: "OVA Games", domain: "ovagames.com" },
     ],
   },
   {
