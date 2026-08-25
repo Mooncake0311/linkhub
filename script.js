@@ -20,11 +20,14 @@ const CATEGORIES = [
       { name: "AnimeSuge", domain: "anisuge.tv/home" },
       { name: "Anime Nexus", domain: "anime.nexus" },
       { name: "AnimePahe", domain: "animepahe.pw"},
+      { name: "Re:Anime", domain: "reanime.to/home"},
       { name: "JustAnime", domain: "justanime.to" },
       { name: "Animex", domain: "animex.one/home" },
       { name: "Yenime", domain: "yenime.net"},
       { name: "Anify", domain: "anify.to"},
       { name: "MiruroTV", domain: "miruro.to"},
+      { name: "Enma", domain: "enma.lol/home"},
+      { name: "Anikoto", domain: "anikototv.to/home"},
     ],
   },
   {
@@ -41,53 +44,28 @@ const CATEGORIES = [
       { name: "FlyStream", domain: "flystream.net"},
       { name: "Flaxfer", domain: "flaxfer.lol"},
       { name: "MovieKid", domain: "moviekids.bz"},
-      { name: "fboxtv", domain: "boxtv.bz"},
+      { name: "fboxtv", domain: "fboxtv.bz"},
     ],  
   },
   {
-    name: "Games",
-    subtitle: "STORES, LAUNCHERS, LIBRARIES",
-    icon: "🎮",
-    links: [
-      { name: "SteamRIP", domain: "steamrip.com" },
-      { name: "fitgirl repacks", domain: "fitgirl-repacks.site" },
-      { name: "DODI Repacks", domain: "dodi-repacks.site" },
-      { name: "ankergames", domain: "ankergames.net" },
-      { name: "Gload", domain: "gload.to" },
-      { name: "OVA Games", domain: "ovagames.com" },
-    ],
-  },
-  {
-    name: "Music",
-    subtitle: "LISTEN, STREAM, DISCOVER",
-    icon: "🎵",
-    links: [
-      { name: "Spotify", domain: "spotify.com" },
-      { name: "YouTube Music", domain: "music.youtube.com" },
-      { name: "SoundCloud", domain: "soundcloud.com" },
-      { name: "Apple Music", domain: "music.apple.com" },
-    ],
-  },
-  {
-    name: "Social",
-    subtitle: "CONNECT, SHARE, CHAT",
-    icon: "💬",
-    links: [
-      { name: "X", domain: "x.com" },
-      { name: "Reddit", domain: "reddit.com" },
-      { name: "Discord", domain: "discord.com" },
-      { name: "Instagram", domain: "instagram.com" },
-    ],
-  },
-  {
-    name: "Work & Dev",
-    subtitle: "CODE, BUILD, COLLABORATE",
-    icon: "💻",
-    links: [
-      { name: "GitHub", domain: "github.com" },
-      { name: "Stack Overflow", domain: "stackoverflow.com" },
-      { name: "Notion", domain: "notion.so" },
-      { name: "VS Code Web", domain: "vscode.dev" },
+    name: "Manga | Manwha",
+    subtitle: "You hate BGM and SFX huh?",
+    icon: "📚️",
+    links: [  
+      { name: "MangaBall", domain: "mangaball.net"},
+      { name: "Mangakakalot", domain: "mangakakalot.gg"},
+      { name: "MangaFire", domain: "mangafire.to"},
+      { name: "Onisaga", domain: "onisaga.com/home"},
+      { name: "Atsumaru", domain: "atsu.moe"},
+      { name: "Manganato", domain: "manganato.gg"},
+      { name: "WeebCentral", domain: "weebcentral.com"},
+      { name: "MangaKatana", domain: "mangakatana.com"},
+      { name: "LikeManga", domain: "likemanga.ink"},
+      { name: "MangaXo", domain: "mangaxo.com/home"},
+      { name: "KingOfShojo", domain: "kingofshojo.com"}, 
+      { name: "Kagane", domain: "kagane.to"},
+      { name: "Comix", domain: "comix.to"},
+      { name: "Toonily", domain: "toonily.com"},
     ],
   },
   {
@@ -97,23 +75,31 @@ const CATEGORIES = [
     links: [
       { name: "TheUselessWeb", domain: "theuselessweb.com" },
       { name: "RadioGarden", domain: "radio.garden" },
-      { name: "Shopee", domain: "shopee.ph" },
-      { name: "eBay", domain: "ebay.com" },
+      { name: "BoredButton", domain: "boredbutton.com" },
+      { name: "FreeRice", domain: "freerice.com" },
+      { name: "Neal.Fun", domain: "neal.fun"},
+      { name: "Gnoosic", domain: "gnoosic.com"},
+      { name: "LittleAlchemy2", domain: "littlealchemy2.com"},
+      { name: "Patatap", domain: "patatap.com"},
+      { name: "Pointer pointer", domain: "pointerpointer.com"},
     ],
   },
   {
-    name: "TorrentPN",
+    name: "Torrent",
     subtitle: "Use VPN for these shits",
-    icon: "📚",
+    icon: "🏴‍☠️",
     links: [
       { name: "ThePirateBay", domain: "thepiratebay3.co" },
+      { name: "YTS GG", domain: "yts.gg"},
       { name: "1337x", domain: "1337x.pro" },
-      { name: "Khan Academy", domain: "khanacademy.org" },
-      { name: "dmhy", domain: "dmhy.org" },
+      { name: "EXT", domain: "ext.to" },
+      { name: "ExtraTorrent", domain: "extratorrent.st" },
+      { name: "TorrentGalaxy", domain: "torrentgalaxy.one"},
+      { name: "LimeTorrents", domain: "www.limetorrents.fun"},
     ],
   },
   {
-    name: "Anonygga",
+    name: "Darkweb (Work in progress)",
     subtitle: "USE AT OWN RISK, USE TOR BROWSER FOR THESE SHITS (this is not negotiable)",
     icon: "🕵",
     links: [
@@ -123,6 +109,17 @@ const CATEGORIES = [
       { name: "If you read this u gae", domain: "lol u gay.fr" },
     ],
   },
+];
+
+/* ==========================================================================
+   WEATHER CITIES
+   Each city needs a name (for display) plus latitude/longitude — the
+   weather API doesn't understand city names, only coordinates.
+   ========================================================================== */
+const WEATHER_CITIES = [
+  { name: "Pasig City", lat: 14.5764, lon: 121.0851 },
+  { name: "Marikina City", lat: 14.6507, lon: 121.1029 },
+  { name: "Makati City", lat: 14.5547, lon: 121.0244 },
 ];
 
 /* ==========================================================================
@@ -310,6 +307,92 @@ function setupSearch() {
   });
 }
 
+async function getCityWeather(city) {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,weather_code`;
+  const response = await fetch(url);
+  const data = await response.json();
+
+  return {
+    name: city.name,
+    temp: Math.round(data.current.temperature_2m),
+    code: data.current.weather_code,
+  };
+}
+
+// Wraps the browser's geolocation API in a Promise, so we can use
+// await with it just like fetch(). getCurrentPosition() itself is
+// older-style JS that uses two callback functions (success, failure)
+// instead of a Promise — this function is a small adapter between
+// the old style and the modern async/await style we've been using.
+function getUserLocation() {
+  return new Promise((resolve, reject) => {
+    if (!navigator.geolocation) {
+      reject(new Error("Geolocation not supported"));
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (position) => resolve(position.coords), // success: hands back { latitude, longitude }
+      (error) => reject(error) // failure: user denied, or it timed out
+    );
+  });
+}
+
+async function loadWeather() {
+  const weatherSection = document.getElementById("weather");
+  weatherSection.innerHTML = `<p class="weather-loading">Loading weather…</p>`;
+
+  let citiesToShow = WEATHER_CITIES; // start with the 3 presets
+
+  try {
+    const coords = await getUserLocation();
+    // Successfully got real location — ADD it to the front of the list
+    // instead of replacing the presets. The spread syntax (...) below
+    // copies every item out of WEATHER_CITIES into this new array,
+    // right after "Your Location".
+    citiesToShow = [
+      { name: "Your Location", lat: coords.latitude, lon: coords.longitude },
+      ...WEATHER_CITIES,
+    ];
+  } catch (error) {
+    // Permission denied, unsupported browser, or timed out — silently
+    // fall back to the 3 preset cities. console.log here just helps us
+    // see WHY it fell back, without showing an ugly error to the user.
+    console.log("Location unavailable, using presets:", error.message);
+  }
+
+  const results = await Promise.all(citiesToShow.map(getCityWeather));
+
+  const WEATHER_CODES = {
+    0: { desc: "Clear sky", icon: "☀️" },
+    1: { desc: "Mostly clear", icon: "🌤️" },
+    2: { desc: "Partly cloudy", icon: "⛅" },
+    3: { desc: "Overcast", icon: "☁️" },
+    45: { desc: "Foggy", icon: "🌫️" },
+    51: { desc: "Light drizzle", icon: "🌦️" },
+    61: { desc: "Light rain", icon: "🌧️" },
+    63: { desc: "Rain", icon: "🌧️" },
+    65: { desc: "Heavy rain", icon: "⛈️" },
+    80: { desc: "Rain showers", icon: "🌦️" },
+    95: { desc: "Thunderstorm", icon: "⛈️" },
+  };
+
+  const cardsHtml = results
+    .map((city) => {
+      const weather = WEATHER_CODES[city.code] || { desc: "—", icon: "🌡️" };
+      return `
+        <div class="weather-card">
+          <div class="weather-icon">${weather.icon}</div>
+          <div class="weather-city">${city.name}</div>
+          <div class="weather-temp">${city.temp}°C</div>
+          <div class="weather-desc">${weather.desc}</div>
+        </div>
+      `;
+    })
+    .join("");
+
+  weatherSection.innerHTML = `<div class="weather-grid">${cardsHtml}</div>`;
+}
+
 /* ==========================================================================
    5. RUN EVERYTHING
    This is the only part of the file that actually executes top-to-bottom
@@ -347,6 +430,8 @@ function setupBadgePrank() {
   });
 }
 
+setupBadgePrank();
+loadWeather();
 renderPills();
 renderDirectory();
 setupPillFiltering();
